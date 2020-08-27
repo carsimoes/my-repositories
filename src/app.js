@@ -91,7 +91,8 @@ app.put("/repositories/:id/like", (request, response) => {
 
   const repositoryTemp = repositories.find(p=>p.id == id);
 
-  const likes = repositoryTemp.likes++;
+  let likesTemp =  repositoryTemp.likes + 1;
+  const likes =likesTemp;
   const title = repositoryTemp.title;
   const url = repositoryTemp.url;
   const techs = repositoryTemp.techs;
